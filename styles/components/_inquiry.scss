@@ -1,0 +1,51 @@
+.inquiry {
+  padding: 42px 0 140px;
+  margin-top: 100px;
+  background-image: url(/assets/img/bg_foot.png);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: auto 100px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 2px solid $black;
+
+  &-title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 1.33em;
+    letter-spacing: -1px;
+    text-align: center;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &-link {
+    @include flexbox;
+
+    a {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      border-bottom: 1px solid $black;
+
+      &:first-child {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-title {
+      margin-bottom: 24px;
+      font-size: 32px;
+    }
+
+    &-link {
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+}

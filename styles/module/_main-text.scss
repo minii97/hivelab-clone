@@ -1,0 +1,22 @@
+%main-text {
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 1.33em;
+  letter-spacing: -2px;
+
+  strong {
+    font-weight: 700;
+  }
+
+  @include responsive(D) {
+    font-size: 48px;
+
+    &.light {
+      color: $white;
+    }
+  }
+}
+
+.main-text {
+  @extend %main-text;
+}

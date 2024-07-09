@@ -1,0 +1,59 @@
+%header-select {
+  @include pos-center-x;
+  top: 34px;
+  padding: 10px 0 10px 20px;
+  background-color: #222;
+  border: 1px solid #444;
+  border-top: 2px solid $border-gray;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  transition-delay: 0.15s;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  a {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #eee;
+
+    span {
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+.gnb {
+  .header-select {
+    @extend %header-select;
+
+    &.long {
+      width: 160px;
+    }
+
+    &.short {
+      // 원래는 82px인데 글자가 넘치는 현상 방지
+      width: 100px;
+    }
+  }
+
+  &.dark {
+    .header-select {
+      background-color: $white;
+      border-color: $border-gray;
+      border-top-color: $black;
+
+      a {
+        color: $black;
+      }
+    }
+  }
+}

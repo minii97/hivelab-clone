@@ -1,0 +1,42 @@
+.history {
+  &-list {
+    position: absolute;
+    top: 30px;
+    left: 40%;
+
+    &::before {
+      position: absolute;
+      top: 55px;
+      right: 20px;
+      width: 324px;
+      height: 1px;
+      background-color: rgba($black, 0.3);
+      content: '';
+    }
+  }
+
+  &-item {
+    margin-bottom: 30px;
+
+    &-title {
+      display: block;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    em {
+      font-size: 55px;
+      font-style: normal;
+      font-weight: 100;
+      line-height: 1.15em;
+
+      span {
+        position: relative;
+        top: -9px;
+        margin-left: 4px;
+        font-size: 30px;
+        font-weight: 300;
+      }
+    }
+  }
+}

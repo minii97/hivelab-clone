@@ -1,0 +1,37 @@
+.gnb-nav {
+  position: relative;
+
+  &-list {
+    @include flexbox;
+  }
+
+  &-item {
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      display: block;
+      padding: 0 10px;
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.71em;
+      color: $white;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+  }
+
+  .line {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    background-color: $white;
+    content: '';
+    opacity: 0;
+    transition: opacity 0.3s, left 0.3s;
+
+    // 각 li>a 요소에 Mouse over하면 border의 width가 client width - 12px 만큼 적용되고 left값은 6+ 앞선 요소들의 client width값으로 적용된다.
+  }
+}

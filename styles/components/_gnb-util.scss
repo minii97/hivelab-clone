@@ -1,0 +1,80 @@
+.gnb-util {
+  &-list {
+    @include flexbox;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+
+  &-item {
+    position: relative;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 24px;
+    color: $white;
+    cursor: pointer;
+
+    > span,
+    > a > span {
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      > a,
+      > span {
+        opacity: 0.4;
+      }
+
+      &:nth-child(1)::before {
+        background-position: -242px -197px !important;
+      }
+
+      &:last-child::after {
+        background-position: -268px -233px !important;
+      }
+    }
+
+    &:first-child:before {
+      @include bg-img-lg(-315px, -126px);
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 4px;
+      content: '';
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 2px;
+        height: 2px;
+        background-color: $white;
+        content: '';
+      }
+    }
+
+    &:last-child {
+      &::before {
+        @include pos-center-y;
+        left: 0;
+        width: 1px;
+        height: 8px;
+        background-color: $white;
+        content: '';
+      }
+
+      &::after {
+        @include bg-img-lg(-288px, -233px);
+        @include pos-center-y;
+        right: 0;
+        width: 6px;
+        height: 4px;
+        content: '';
+      }
+    }
+  }
+}

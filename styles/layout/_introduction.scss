@@ -1,0 +1,152 @@
+.introduction {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: $introduction-level;
+  display: none;
+  width: 100%;
+  padding: 40px 20px 25px;
+  background-color: $white;
+
+  &.is-active {
+    display: block;
+  }
+
+  &-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $black;
+
+    .introduction-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.5em;
+      letter-spacing: -1px;
+    }
+
+    .introduction-close-btn {
+      @include flexbox;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 58px;
+      height: 58px;
+
+      span {
+        @include bg-img-sm(0, -202px);
+        display: block;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  &-list {
+    padding-top: 25px;
+    margin-bottom: 35px;
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    input:checked + label::before {
+      background-position-y: -91px;
+    }
+
+    label {
+      @include flexbox(start);
+      font-size: 13px;
+      font-weight: 100;
+      line-height: 24px;
+      color: #222;
+
+      &::before {
+        @include bg-img-sm(-231px, -63px);
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        content: '';
+      }
+    }
+  }
+
+  &-down-btn {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.36em;
+    color: $white;
+    text-align: center;
+    background-color: $red;
+  }
+
+  @include responsive(D) {
+    @include pos-center(fixed);
+    bottom: auto;
+    width: 400px;
+    padding: 73px 40px 40px;
+    box-sizing: content-box;
+
+    &-header {
+      padding-bottom: 18px;
+      border-bottom-width: 2px;
+
+      .introduction-title {
+        font-size: 26px;
+        line-height: 1.38em;
+        letter-spacing: -2px;
+      }
+
+      .introduction-close-btn {
+        width: 70px;
+        height: 70px;
+
+        span {
+          @include bg-img-lg(-242px, -148px);
+          width: 21px;
+          height: 21px;
+        }
+      }
+    }
+
+    &-list {
+      padding-top: 38px;
+      margin-bottom: 60px;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 36px;
+      }
+
+      input:checked + label::before {
+        background-position: -298px -173px;
+        border-color: $black;
+      }
+
+      label {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 25px;
+        cursor: pointer;
+
+        &::before {
+          @include bg-img-lg(-268px, -204px);
+          width: 25px;
+          height: 25px;
+          border: 1px solid #ddd;
+        }
+      }
+    }
+
+    &-down-btn {
+      padding: 21px 0 20px;
+      font-size: 20px;
+      line-height: 29px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $home-section-level;
+  width: 100%;
+  height: calc(100vh - #{$download-btn-height-sm});
+  overflow: hidden;
+
+  &-text {
+    position: absolute;
+    bottom: 25%;
+    left: 30px;
+    z-index: $section-text-level;
+
+    * {
+      color: $white;
+    }
+
+    .home-title {
+      margin-bottom: 19px;
+      font-size: 33px;
+      line-height: 1.33em;
+    }
+
+    .home-desc {
+      font-size: 13px;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  &-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $section-video-level;
+    width: 100%;
+    height: calc(100vh - #{$download-btn-height-sm});
+    overflow: hidden;
+
+    video {
+      @include pos-center;
+      height: calc(100vh - #{$download-btn-height-sm});
+    }
+  }
+
+  @include responsive(T) {
+    &-text {
+      bottom: 43%;
+      left: 18.2%;
+
+      .home-title {
+        font-size: 45px;
+      }
+
+      .home-desc {
+        font-size: 16px;
+        letter-spacing: -0.8px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    height: 100vh;
+
+    &-text {
+      .home-title {
+        margin-bottom: 29px;
+        font-size: 65px;
+        line-height: 1.14em;
+      }
+    }
+
+    &-video {
+      height: 100vh;
+
+      video {
+        height: 110vh;
+      }
+    }
+  }
+}

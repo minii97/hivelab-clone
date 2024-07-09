@@ -1,0 +1,125 @@
+.gnb {
+  @include flexbox(between);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $header-level;
+  width: 100%;
+  background: transparent;
+
+  .title {
+    a {
+      display: block;
+      padding: 21px 20px;
+
+      span {
+        @include bg-img-sm(-69px, -164px);
+        display: block;
+        width: 119px;
+        height: 12px;
+      }
+    }
+  }
+
+  .menu-btn {
+    padding: 20px 20px 19px;
+
+    span {
+      @include bg-img-sm(-126px, -117px);
+      display: block;
+      width: 22px;
+      height: 15px;
+    }
+  }
+
+  @include responsive(D) {
+    justify-content: start;
+    padding: 30px 0;
+
+    .title {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+
+      a {
+        padding: 6px 5px;
+
+        span {
+          @include bg-img-lg(0, -244px);
+        }
+      }
+    }
+
+    &-right {
+      .gnb-nav {
+        margin-left: 224px;
+      }
+    }
+
+    &.dark {
+      .title {
+        a {
+          span {
+            background-position-x: -123px;
+          }
+        }
+      }
+
+      .gnb-nav {
+        &-item a {
+          color: $text-gray;
+
+          &:hover {
+            color: $black;
+          }
+        }
+
+        .line {
+          background-color: $black;
+        }
+      }
+
+      .gnb-util {
+        &-item {
+          color: $black;
+
+          &:hover {
+            > span {
+              color: $text-gray;
+              opacity: 1;
+            }
+
+            &:first-child:before {
+              background-position: -315px -154px !important;
+            }
+
+            &:last-child::after {
+              background-position: -278px -233px !important;
+            }
+          }
+
+          &:first-child:before {
+            background-position-y: -140px;
+          }
+
+          &:nth-child(1),
+          &:nth-child(2) {
+            &::after {
+              background-color: $black;
+            }
+          }
+
+          &:last-child {
+            &::before {
+              background-color: rgba($black, 0.3);
+            }
+
+            &::after {
+              background-position-x: -298px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

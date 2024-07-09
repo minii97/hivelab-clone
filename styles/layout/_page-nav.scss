@@ -1,0 +1,59 @@
+.page-nav {
+  @include flexbox(start, start);
+  position: fixed;
+  bottom: $footer-lg-y-pos;
+  left: $footer-lg-x-pos;
+  flex-direction: column;
+  width: 60px;
+
+  &-num {
+    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: 1.25em;
+    color: $white;
+
+    * {
+      display: block;
+      text-align: right;
+    }
+
+    &.dark {
+      color: $black;
+    }
+
+    .now {
+      font-weight: 900;
+    }
+
+    .total {
+      font-weight: 100;
+
+      &::before {
+        content: '/';
+      }
+    }
+  }
+
+  &-btn-wrap {
+    @include flexbox(start);
+    align-self: flex-end;
+
+    button {
+      width: 24px;
+
+      span {
+        @include bg-img-lg(0, -260px);
+        display: block;
+        height: 24px;
+      }
+
+      &.next-btn {
+        margin-left: -1px;
+
+        span {
+          background-position-x: -56px;
+        }
+      }
+    }
+  }
+}

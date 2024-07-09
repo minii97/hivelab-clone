@@ -1,0 +1,76 @@
+$close-btn-width: 60px;
+
+.menu-header {
+  @include flexbox(between);
+  position: relative;
+  width: 100%;
+
+  .title {
+    a {
+      display: block;
+      padding: 21px 20px;
+
+      span {
+        @include bg-img-sm(0, -186px);
+        display: block;
+        width: 119px;
+        height: 12px;
+      }
+    }
+  }
+
+  .menu-lang-list {
+    @include flexbox;
+    margin-right: $close-btn-width;
+  }
+
+  .menu-lang-item {
+    position: relative;
+
+    a {
+      padding: 6px;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 2.13em;
+      letter-spacing: 0.3px;
+    }
+
+    &.is-active {
+      a {
+        font-weight: 900;
+      }
+    }
+
+    &:not(:first-child)::before {
+      @include pos-center-y;
+      left: -1px;
+      width: 2px;
+      height: 2px;
+      background-color: $white;
+      content: '';
+    }
+  }
+
+  .menu-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 17px 20px;
+
+    span {
+      @include bg-img-sm(-186px, -117px);
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @include responsive(T) {
+    .menu-lang-item {
+      a {
+        padding: 12px;
+        font-size: 18px;
+      }
+    }
+  }
+}

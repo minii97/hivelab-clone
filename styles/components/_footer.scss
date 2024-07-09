@@ -1,0 +1,120 @@
+.footer {
+  padding: 50px 20px 103px;
+
+  &-logo {
+    width: 120px;
+    margin-bottom: 11px;
+
+    span {
+      @include bg-img-sm(-69px, -147px);
+      display: block;
+      width: 100%;
+      height: 13px;
+    }
+  }
+
+  &-title {
+    margin-bottom: 18px;
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  &-address-list {
+    &::after {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin: 36px 0 40px;
+      background-color: #999;
+      content: '';
+    }
+  }
+
+  &-address-item {
+    @include flexbox(start);
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.67em;
+
+    dt::after {
+      margin-right: 2px;
+      content: '.';
+    }
+  }
+
+  &-links {
+    @include flexbox(start);
+    margin-bottom: 14px;
+
+    a {
+      display: block;
+      width: 32px;
+
+      span {
+        display: block;
+        @include bg-img-sm(-126px, -81px);
+        height: 32px;
+      }
+
+      &:last-child {
+        margin-left: 8px;
+
+        span {
+          background-position: -231px 0;
+        }
+      }
+    }
+  }
+
+  &-privacy {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: 0.5px;
+    color: #2f5597;
+    text-decoration: underline;
+  }
+
+  &-copy {
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1.5em;
+    letter-spacing: 0.5px;
+    color: $white;
+  }
+
+  @include responsive(T) {
+    &-title {
+      font-size: 16px;
+    }
+
+    &-address-list {
+      &::after {
+        margin: 42px 0 50px;
+      }
+    }
+
+    &-address-item {
+      font-size: 14px;
+    }
+
+    &-privacy {
+      font-size: 14px;
+    }
+  }
+
+  @include responsive(D) {
+    &-copy {
+      position: fixed;
+      right: $footer-lg-x-pos;
+      bottom: $footer-lg-y-pos;
+      z-index: $footer-copy-level;
+
+      &.dark {
+        color: $black;
+      }
+    }
+  }
+}
