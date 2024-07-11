@@ -2,6 +2,8 @@
 // 클로즈 버튼 누르면 introduction이 사라짐
 // 이는 is-active 클래스의 토글로 이루어진다.
 
+// 클로즈 버튼 뿐 아니라 overlay 클릭시에도 is-active 클래스 remove.
+
 const downloadMenu = document.querySelector('.introduction')
 const overlay = document.querySelector('.overlay')
 
@@ -13,14 +15,20 @@ function toggleDownloadMenuState() {
   document.body.style.overflow = 'hidden'
   closeBtn = document.querySelector('.introduction-close-btn')
 
-  closeBtn.addEventListener('click', () => {
-    downloadMenu.classList.remove('is-active')
-    overlay.classList.remove('is-active')
-    document.body.style.overflow = 'auto'
+  window.addEventListener('click', (e) => {
+    if (
+      e.target == closeBtn ||
+      e.target.parentNode == closeBtn ||
+      e.target == overlay
+    ) {
+      downloadMenu.classList.remove('is-active')
+      overlay.classList.remove('is-active')
+      document.body.style.overflow = 'auto'
 
-    checkBox.forEach((data) => {
-      data.checked = false
-    })
+      checkBox.forEach((data) => {
+        data.checked = false
+      })
+    }
   })
 }
 
