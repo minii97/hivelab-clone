@@ -4,7 +4,6 @@
   left: 0;
   z-index: $menu-level;
   width: 100%;
-  height: 100vh;
   overflow: auto;
   background-color: rgba($black, 0.92);
   visibility: hidden;
@@ -22,7 +21,7 @@
   }
 
   .menu-contents {
-    padding: 110px 40px 0;
+    padding: 110px 40px 50px;
   }
 
   &-nav,
@@ -84,13 +83,9 @@
   }
 
   &-footer {
-    margin-bottom: 50px;
     font-size: 11px;
     font-weight: 900;
     line-height: 1.36em;
     letter-spacing: 0.5px;
-  }
-
-  @include responsive(T) {
   }
 }

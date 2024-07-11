@@ -7,6 +7,7 @@ const menu = document.querySelector('.menu')
 
 function toggleMenuState(a) {
   menu.classList.add('is-active')
+  menu.style.height = `${window.innerHeight}px`
   document.body.style.overflow = 'hidden'
   closeBtn = document.querySelector('.menu-close-btn')
 
