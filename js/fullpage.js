@@ -2,7 +2,6 @@ $(document).ready(function () {
   $('.main').fullpage({
     responsiveWidth: 1200,
     sectionSelector: '.section',
-    lazyLoading: true,
     onLeave: function (index, nextIndex, direction) {
       if (index == 1 && direction == 'down') {
         gnb.classList.add('dark')
