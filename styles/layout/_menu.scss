@@ -22,7 +22,7 @@
   }
 
   .menu-contents {
-    padding: 110px 40px 50px;
+    padding: 110px 40px 0;
   }
 
   &-nav,
@@ -84,6 +84,7 @@
   }
 
   &-footer {
+    margin-bottom: 50px;
     font-size: 11px;
     font-weight: 900;
     line-height: 1.36em;
