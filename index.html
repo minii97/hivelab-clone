@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 파비콘 -->
+    <link rel="apple-touch-icon" sizes="60x60" href="/hivelab-clone/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/hivelab-clone/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/hivelab-clone/favicon-16x16.png" />
+    <link rel="manifest" href="/hivelab-clone/site.webmanifest" />
+    <link rel="mask-icon" href="/hivelab-clone/safari-pinned-tab.svg" color="#4c4c4c" />
+    <meta name="msapplication-TileColor" content="#4c4c4c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>하이브랩</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"
+      integrity="sha512-bxzECOBohzcTcWocMAlNDE2kYs0QgwGs4eD8TlAN2vfovq13kfDfp95sJSZrNpt0VMkpP93ZxLC/+WN/7Trw2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css"
+      integrity="sha512-q54FvbV+gGBn+NvgaD4gpJ7w4wrO00DgW7Rx503PIhrf0CuMwLOwbS+bXgOBFSob+6GVy1HDPfaRLJ8w2jiS4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="gnb">
+      <h1 class="title" aria-label="hivelab">
+        <span class="visually-hidden">하이브랩</span>
+        <a href="javascript:location.reload()"><span></span></a>
+      </h1>
+
+      <div class="gnb-right lg-only">
+        <nav class="gnb-nav">
+          <ul class="gnb-nav-list">
+            <li class="gnb-nav-item"><a data-num="1" href="#">About</a></li>
+            <li class="gnb-nav-item"><a data-num="2" href="#">Service</a></li>
+            <li class="gnb-nav-item"><a data-num="3" href="#">Work</a></li>
+            <li class="gnb-nav-item"><a data-num="4" href="#">People</a></li>
+            <li class="gnb-nav-item"><a data-num="5" href="#">Contact</a></li>
+          </ul>
+
+          <div class="line"></div>
+        </nav>
+
+        <ul class="gnb-util-list">
+          <li class="gnb-util-item">
+            <span>회사소개서</span>
+
+            <div class="header-select long">
+              <ul class="header-select-list">
+                <li class="header-select-item">
+                  <a href="#">하이브랩 오피셜</a>
+                </li>
+                <li class="header-select-item">
+                  <a href="#">디지털 마켓팅 그룹</a>
+                </li>
+                <li class="header-select-item">
+                  <a href="#">디지털 플랫폼 그룹</a>
+                </li>
+                <li class="header-select-item">
+                  <a href="#">기술개발 그룹</a>
+                </li>
+                <li class="header-select-item">
+                  <a href="#">게임 디자인 그룹</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb-util-item">
+            <span>Blog</span>
+
+            <div class="header-select long">
+              <ul class="header-select-list">
+                <li class="header-select-item">
+                  <a href="#">HIVELAB <span>blog</span></a>
+                </li>
+                <li class="header-select-item">
+                  <a href="#">Tech <span>blog</span></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb-util-item">
+            <a href="#"><span>Facebook</span></a>
+          </li>
+          <li class="gnb-util-item">
+            <span>Kor</span>
+
+            <div class="header-select short">
+              <ul class="header-select-list">
+                <li class="header-select-item">
+                  <a href="#">Korean</a>
+                </li>
+                <li class="header-select-item">
+                  <a href="#">English</a>
+                </li>
+                <li class="header-select-item">
+                  <a href="#">Vietnamese</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <button class="menu-btn lg-hidden" type="button" aria-label="메뉴 열기">
+        <span></span>
+      </button>
+    </header>
+
+    <main class="main">
+      <section class="home section">
+        <div class="home-text">
+          <h3 class="home-title">Hybrid <br />Digital Solution.</h3>
+          <p class="home-desc lg-hidden">
+            하이브랩은 플랫폼 중심의 <br />디지털 커뮤니케이션 에이전시입니다.
+          </p>
+
+          <p class="home-desc lg-only">
+            하이브랩은 플랫폼 중심의 디지털 커뮤니케이션 에이전시입니다.
+          </p>
+        </div>
+
+        <div class="home-video">
+          <video
+            muted
+            data-keepplaying
+            autoplay
+            loop
+            playsinline
+            src="/assets/video/first-section-video.mp4"
+          ></video>
+
+          <div></div>
+        </div>
+      </section>
+      <section class="second section">
+        <div class="section-contents">
+          <div class="video-wrap">
+            <video
+              muted
+              autoplay
+              loop
+              playsinline
+              data-keepplaying
+              src="./assets/video/second-section-video.mp4"
+            ></video>
+          </div>
+
+          <div class="text-wrap lg-hidden">
+            <h3 class="main-text">
+              하이브랩은<br />
+              <strong>플랫폼 중심</strong>의<br />
+              <strong>디지털</strong>
+              <strong>커뮤니케이션</strong><br />
+              에이전시입니다.
+            </h3>
+            <a class="main-link" href="#">회사소개 보기</a>
+          </div>
+
+          <div class="text-wrap lg-only">
+            <h3 class="main-text">
+              하이브랩은<br />
+              <strong>플랫폼 중심</strong>의<br />
+              <strong>디지털</strong><br />
+              <strong>커뮤니케이션</strong><br />
+              에이전시입니다.
+            </h3>
+            <a class="main-link" href="#">회사소개 보기</a>
+          </div>
+
+          <ul class="history-list lg-only">
+            <!-- 숫자의 의미상 강조를 위하여 <em> 태그 사용 -->
+            <li class="history-item">
+              <span class="history-item-title">Founded in </span><em>2012</em>
+            </li>
+            <li class="history-item">
+              <span class="history-item-title">Members</span
+              ><em>200<span>+</span></em>
+            </li>
+            <li class="history-item">
+              <span class="history-item-title">Global Client</span
+              ><em>230<span>+</span></em>
+            </li>
+            <li class="history-item">
+              <span class="history-item-title">Projects delivered</span
+              ><em>1100<span>+</span></em>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="third section">
+        <div class="section-contents">
+          <div class="video-wrap">
+            <video
+              data-keepplaying
+              muted
+              autoplay
+              loop
+              playsinline
+              src="./assets/video/third-section-video.mp4"
+            ></video>
+          </div>
+
+          <div class="text-wrap">
+            <h3 class="main-text">
+              우리의 솔루션은<br />
+              새로운 시대와 세대를 위한<br />
+              <strong>디지털 트랜스포메이션</strong><br />
+              <strong>혁신</strong>에 주목합니다.
+            </h3>
+            <a class="main-link" href="#"> 포트폴리오 보기</a>
+          </div>
+        </div>
+      </section>
+      <section class="fourth section">
+        <div class="section-contents">
+          <div class="video-wrap">
+            <video
+              data-keepplaying
+              muted
+              autoplay
+              loop
+              playsinline
+              src="./assets/video/fourth-section-video.mp4"
+            ></video>
+          </div>
+
+          <div class="text-wrap lg-hidden">
+            <h3 class="main-text light">
+              우리는 서비스의<br /><strong>새로운 가치와 기회</strong>를<br />
+              발견하여 <strong>최적의 솔루션</strong>을<br />제공합니다.
+            </h3>
+            <a class="main-link light" href="#">서비스 보기</a>
+          </div>
+
+          <div class="text-wrap lg-only">
+            <h3 class="main-text light">
+              하이브랩은<br />고객의 <strong>비즈니스 플랜에</strong><br />
+              <strong>새로운 가치와 기회</strong>를<br />
+              발견하여 <strong>최적의</strong><br />
+              서비스를 제공합니다.
+            </h3>
+            <a class="main-link light" href="#">서비스 보기</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="inquiry lg-hidden">
+        <h3 class="inquiry-title">
+          우리와 <strong>함께하실 준비</strong> 되셨나요?
+        </h3>
+
+        <div class="inquiry-link">
+          <a href="#">프로젝트 문의</a><a href="#">채용</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-wrap lg-hidden">
+        <h1 class="footer-logo" aria-label="하이브랩 로고">
+          <span class="visually-hidden">하이브랩</span><span></span>
+        </h1>
+
+        <h3 class="footer-title">Hybrid Digital Solution</h3>
+
+        <dl class="footer-address-list">
+          <div class="footer-address-item">
+            <dt>e-mail</dt>
+            <dd><address>sales&#64;hivelab.co.kr</address></dd>
+          </div>
+          <div class="footer-address-item">
+            <dt>tel</dt>
+            <dd>031-698-3001</dd>
+          </div>
+          <div class="footer-address-item">
+            <dt>fax</dt>
+            <dd>031-698-3002</dd>
+          </div>
+        </dl>
+
+        <div class="footer-links">
+          <a href="#" aria-label="가족친화지원사업"><span></span></a
+          ><a href="#" aria-label="워크넷-청년친화강소기업"><span></span></a>
+        </div>
+
+        <a class="footer-privacy" href="#">개인정보처리방침</a>
+      </div>
+
+      <address class="footer-copy">&copy; HIVELAB All rights reserved.</address>
+    </footer>
+
+    <button type="button" class="download-btn">
+      <span>회사소개서</span>
+    </button>
+
+    <button
+      type="button"
+      class="scroll-top-btn lg-hidden"
+      aria-label="페이지 상단으로"
+    >
+      <span></span>
+    </button>
+
+    <aside class="menu lg-hidden">
+      <header class="menu-header">
+        <h3 class="title" aria-label="hivelab">
+          <span class="visually-hidden">하이브랩</span>
+          <a href="javascript:location.reload()"><span></span></a>
+        </h3>
+
+        <ul class="menu-lang-list">
+          <li class="menu-lang-item is-active">
+            <a href="#" aria-label="한국어 페이지로 이동">KO</a>
+          </li>
+          <li class="menu-lang-item">
+            <a href="#" aria-label="영문 페이지로 이동">ENG</a>
+          </li>
+          <li class="menu-lang-item">
+            <a href="#" aria-label="베트남어 페이지로 이동">VIE</a>
+          </li>
+        </ul>
+
+        <button class="menu-close-btn" type="button" aria-label="메뉴 닫기">
+          <span></span>
+        </button>
+      </header>
+
+      <div class="menu-contents">
+        <nav class="menu-nav">
+          <ul class="menu-nav-list">
+            <li class="menu-nav-item"><a href="#">About</a></li>
+            <li class="menu-nav-item"><a href="#">Service</a></li>
+            <li class="menu-nav-item"><a href="#">Work</a></li>
+            <li class="menu-nav-item"><a href="#">People</a></li>
+            <li class="menu-nav-item"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="menu-util">
+          <h3 class="menu-util-title">
+            Company Belief<br />
+            Download
+          </h3>
+          <ul class="menu-util-list">
+            <li class="menu-util-item">
+              <a href="#">하이브랩 오피셜</a>
+            </li>
+            <li class="menu-util-item">
+              <a href="#">디지털 마켓팅 그룹</a>
+            </li>
+            <li class="menu-util-item">
+              <a href="#">디지털 플랫폼 그룹</a>
+            </li>
+            <li class="menu-util-item">
+              <a href="#">기술개발 그룹</a>
+            </li>
+            <li class="menu-util-item">
+              <a href="#">게임 디자인 그룹</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="menu-sns-list">
+          <li class="menu-sns-item"><a href="#">Facebook</a></li>
+          <li class="menu-sns-item"><a href="#">Hivelab Blog</a></li>
+          <li class="menu-sns-item"><a href="#">Tech Blog</a></li>
+        </ul>
+        <address class="menu-footer">
+          &copy; HIVELAB All rights reserved.
+        </address>
+      </div>
+    </aside>
+
+    <aside class="introduction">
+      <header class="introduction-header">
+        <h3 class="introduction-title">Company Brief Download</h3>
+
+        <button
+          class="introduction-close-btn"
+          type="button"
+          aria-label="창 닫기"
+        >
+          <span></span>
+        </button>
+      </header>
+
+      <ul class="introduction-list">
+        <li class="introduction-item">
+          <input class="visually-hidden" id="official" type="checkbox" />
+          <label for="official">하이브랩 오피셜</label>
+        </li>
+        <li class="introduction-item">
+          <input class="visually-hidden" id="marketing" type="checkbox" />
+          <label for="marketing">디지털 마케팅 그룹</label>
+        </li>
+        <li class="introduction-item">
+          <input class="visually-hidden" id="platform" type="checkbox" />
+          <label for="platform">디지털 플랫폼 그룹</label>
+        </li>
+        <li class="introduction-item">
+          <input class="visually-hidden" id="technique" type="checkbox" />
+          <label for="technique">기술개발 그룹</label>
+        </li>
+        <li class="introduction-item">
+          <input class="visually-hidden" id="game" type="checkbox" />
+          <label for="game">게임 디자인 그룹</label>
+        </li>
+      </ul>
+
+      <a href="#" class="introduction-down-btn">다운로드</a>
+    </aside>
+
+    <div class="page-nav lg-only">
+      <div class="page-nav-num">
+        <span class="now" aria-label="현재 페이지">01</span>
+        <span class="total" aria-label="전체 페이지">04</span>
+      </div>
+
+      <div class="page-nav-btn-wrap">
+        <button class="prev-btn" type="button" aria-label="이전 페이지로 이동">
+          <span></span>
+        </button>
+        <button class="next-btn" type="button" aria-label="다음 페이지로 이동">
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="overlay" aria-hidden></div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/fullpage.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/introduction.js"></script>
+    <script src="./js/scroll-top-btn.js"></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>
