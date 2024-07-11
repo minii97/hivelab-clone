@@ -1,11 +1,11 @@
 @mixin bg-img-sm($bg-pos-x, $bg-pos-y) {
-  background-image: url(/assets/img/retina@2x.png);
+  background-image: url(./assets/img/retina@2x.png);
   background-position: $bg-pos-x $bg-pos-y;
   background-size: 264px 220px;
 }
 
 @mixin bg-img-lg($bg-pos-x, $bg-pos-y) {
-  background-image: url(/assets/img/sprites.png);
+  background-image: url(./assets/img/sprites.png);
   background-position: $bg-pos-x $bg-pos-y;
   background-size: 327px 284px;
 }
